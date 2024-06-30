@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة العمر المتقدمة - محمود مطراوي</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="calculator">
+        <h1>حاسبة العمر المتقدمة - محمود مطراوي</h1>
+        <label for="birthdate">تاريخ الميلاد:</label>
+        <input type="date" id="birthdate">
+        <label for="birthtime">ساعة الميلاد:</label>
+        <input type="time" id="birthtime" value="00:00">
+        <button onclick="randomizeBirthtime()">اختيار عشوائي</button>
+        <button onclick="calculateAge()">احسب العمر</button>
+        <div id="result"></div>
+        <label for="message">الرسالة المراد إرسالها:</label>
+        <textarea id="message" placeholder="أدخل النص الذي ترغب في إرساله عبر WhatsApp" oninput="updateWhatsAppLink()"></textarea>
+        <button onclick="sendMessage()">إرسال رسالة عبر WhatsApp</button>
+        <p><a id="whatsapp-link" href="#" target="_blank">التواصل عبر WhatsApp</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
